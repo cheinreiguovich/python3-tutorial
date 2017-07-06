@@ -6,6 +6,7 @@
 __author__ = 'Charles Guo'
 
 def fact(n):
+
 	'''
 	
 	A function that calculates factorials
@@ -16,8 +17,13 @@ def fact(n):
 	1
 	>>> fact(4)
 	24
+	>>> fact(0.5)
+	Traceback (most recent call last):
+		...
+	ValueError
     
 	'''
+	
 	if n < 0:
 		raise ValueError()
 	if n == 0:
