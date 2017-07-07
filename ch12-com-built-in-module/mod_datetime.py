@@ -43,27 +43,17 @@ print(tokyo_peking_dt)
 import re
 
 def to_timestamp(dt_str, tz_str):
-	re_dt = re.compile(r'^(.{4})\-(.)\-(.{1,2})\s(.{2})\:(.{2})\:(.{2})$')
-	re_tz = re.compile(r'^(UTC)([+|-])(.{1,2})\:(.{2})$')
-	gp_dt = re_dt.match(dt_str).groups()
+	cday = datetime.strptime(dt_str, '%Y-%m-%d %H:%M:%S')
+	re_tz = re.compile(r'^(UTC)([+|-].{1,2})\:(.{2})$')
 	gp_tz = re_tz.match(tz_str).groups()
-	# print(gp_dt)
-	# print(gp_tz)
-	if gp_tz[1] == '+':
-		tz_hours = int(gp_tz[2])
-	else:
-		tz_hours = -int(gp_tz[2])
-		
-	int_dt = []
-	for x in gp_dt:
-		int_dt.append(int(x))
-	dt = datetime(int_dt[0], int_dt[1], int_dt[2], int_dt[3], int_dt[4], int_dt[5])
-	utc_dt = dt - timedelta(hours = tz_hours)
-	return utc_dt.timestamp()
-		
+	tz_hours = int(gp_tz[1])
+	force_utc = timezone(timedelta(hours = tz_hours))
+	dt = cday.replace(tzinfo = force_utc)
+	return dt.timestamp()
+	
+print('\nExercise:')	
 t1 = to_timestamp('2015-6-1 08:10:30', 'UTC+7:00')
-#assert t1 == 1433121030.0, t1
-
+assert t1 == 1433121030.0, t1
 t2 = to_timestamp('2015-5-31 16:10:30', 'UTC-09:00')
-#assert t2 == 1433121030.0, t2
+assert t2 == 1433121030.0, t2
 print('%f\n%f\nPass' % (t1, t2))
