@@ -40,32 +40,66 @@ parser.feed('''<html>
 </body></html>''')
 
 allevent_dict = {'Upcoming': {}, 'Missed': {}}
+event_cate = 'Upcoming'
 event_dict = {}
-num_event_come = 0
-num_event_miss = 0
-detail = ''
+num_event, num_name, num_time, num_location = 0, 0, 0, 0
+subkey = ''
 class MyNewHTMLParser(HTMLParser):
-
+        
     def handle_starttag(self, tag, attrs):
 
         global allevent_dict
+        global event_cate
         global event_dict
-        global num_event_come
-        global num_event_miss
+        global num_event
+        global num_name
+        global num_location
+        global num_time
+        global subkey
 
-        if tag == 'h3' and 'You just missed...' in attrs:
-            if tag == 'h3':
-                print(attrs)
+        if tag == 'h3' and len(attrs) > 0:
+            if attrs[0][1] == 'event-title':
+                num_event += 1
+                allevent_dict[event_cate][num_event] = {}
+            if 'miss' in attrs[0][1]:
+                event_cate = 'Missed'
+                num_event, num_name, num_time, num_location = 0, 0, 0, 0
+
+        if tag == 'a' and len(attrs) > 0:
+            if '/events/python-events/' in attrs[0][1] and 'past' not in attrs[0][1]:
+                num_name += 1
+                allevent_dict[event_cate][num_name]['Name'] = {}
+                subkey = 'Name'
+            else:
+                subkey = ''
+        elif tag == 'span' and len(attrs) > 0:
+            if 'event-location' in attrs[0][1]:
+                num_location += 1
+                allevent_dict[event_cate][num_location]['Location'] = {}
+                subkey = 'Location'
+            else:
+                subkey = ''
+        elif tag == 'time':
+            num_time += 1
+            allevent_dict[event_cate][num_time]['Time'] = {}
+            subkey = 'Time'
+        else:
+            subkey = ''
 
     def handle_data(self, data):
-
-        global detail
-
-        detail = data
-
-    def handle_endtag(self, tag):
-        pass
-
+        if subkey == 'Name':
+            name = data.strip()
+            if not len(name) == 0:
+                allevent_dict[event_cate][num_name]['Name'] = name
+        elif subkey == 'Time':
+            time = data.strip()
+            allevent_dict[event_cate][num_time]['Time'] = time
+        elif subkey == 'Location':
+            location = data.strip()
+            if not len(location) == 0:
+                allevent_dict[event_cate][num_location]['Location'] = location
+        else:
+            pass
 
 webparser = MyNewHTMLParser()
 webparser.feed('''
@@ -992,8 +1026,5 @@ webparser.feed('''
 </body>
 </html>''')
 
-'''
-print(num_event_miss)
-print(num_event_come)
+
 print('Events: \n', allevent_dict)
-'''
