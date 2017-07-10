@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns:yahoo="http://www.yahooapis.com/v1/base.rng" yahoo:count="1" yahoo:created="2017-07-10T12:13:03Z" yahoo:lang="en-US"><results><channel><yweather:units xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" distance="mi" pressure="in" speed="mph" temperature="F"/><title>Yahoo! Weather - Hangzhou, Zhejiang, CN</title><link>http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2132574/</link><description>Yahoo! Weather for Hangzhou, Zhejiang, CN</description><language>en-us</language><lastBuildDate>Mon, 10 Jul 2017 08:13 PM CST</lastBuildDate><ttl>60</ttl><yweather:location xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" city="Hangzhou" country="China" region=" Zhejiang"/><yweather:wind xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" chill="81" direction="225" speed="7"/><yweather:atmosphere xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" humidity="90" pressure="1004.0" rising="0" visibility="15.9"/><yweather:astronomy xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" sunrise="5:5 am" sunset="7:4 pm"/><image><title>Yahoo! Weather</title><width>142</width><height>18</height><link>http://weather.yahoo.com</link><url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url></image><item><title>Conditions for Hangzhou, Zhejiang, CN at 07:00 PM CST</title><geo:lat xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">30.252501</geo:lat><geo:long xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">120.165024</geo:long><link>http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2132574/</link><pubDate>Mon, 10 Jul 2017 07:00 PM CST</pubDate><yweather:condition xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="4" date="Mon, 10 Jul 2017 07:00 PM CST" temp="81" text="Thunderstorms"/><yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="4" date="10 Jul 2017" day="Mon" high="93" low="79" text="Thunderstorms"/><yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="4" date="11 Jul 2017" day="Tue" high="87" low="79" text="Thunderstorms"/><yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="4" date="12 Jul 2017" day="Wed" high="96" low="79" text="Thunderstorms"/><yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="30" date="13 Jul 2017" day="Thu" high="96" low="81" text="Partly Cloudy"/><yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="30" date="14 Jul 2017" day="Fri" high="96" low="81" text="Partly Cloudy"/><yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="4" date="15 Jul 2017" day="Sat" high="97" low="82" text="Thunderstorms"/><yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="30" date="16 Jul 2017" day="Sun" high="94" low="82" text="Partly Cloudy"/><yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="30" date="17 Jul 2017" day="Mon" high="93" low="81" text="Partly Cloudy"/><yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="4" date="18 Jul 2017" day="Tue" high="92" low="81" text="Thunderstorms"/><yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="30" date="19 Jul 2017" day="Wed" high="93" low="81" text="Partly Cloudy"/><description>&lt;![CDATA[&lt;img src="http://l.yimg.com/a/i/us/we/52/4.gif"/&gt;
+&lt;BR /&gt;
+&lt;b&gt;Current Conditions:&lt;/b&gt;
+&lt;BR /&gt;Thunderstorms
+&lt;BR /&gt;
+&lt;BR /&gt;
+&lt;b&gt;Forecast:&lt;/b&gt;
+&lt;BR /&gt; Mon - Thunderstorms. High: 93Low: 79
+&lt;BR /&gt; Tue - Thunderstorms. High: 87Low: 79
+&lt;BR /&gt; Wed - Thunderstorms. High: 96Low: 79
+&lt;BR /&gt; Thu - Partly Cloudy. High: 96Low: 81
+&lt;BR /&gt; Fri - Partly Cloudy. High: 96Low: 81
+&lt;BR /&gt;
+&lt;BR /&gt;
+&lt;a href="http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2132574/"&gt;Full Forecast at Yahoo! Weather&lt;/a&gt;
+&lt;BR /&gt;
+&lt;BR /&gt;
+(provided by &lt;a href="http://www.weather.com" &gt;The Weather Channel&lt;/a&gt;)
+&lt;BR /&gt;
+]]&gt;</description><guid isPermaLink="false"/></item></channel></results></query><!-- total: 14 -->
